@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+p {
+  margin: 10px 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* styles for ListClientsPages and DashboardPage*/
+.clients,
+.dashboard {
+  padding: 5px 15px;
+}
+.clients span {
+  font-weight: bold;
+}
+
+.clients-footer {
+  margin-top: 20px;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .list-clients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .list-clients {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
