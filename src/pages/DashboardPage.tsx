@@ -6,8 +6,11 @@ interface DashboardPageProps {}
 
 const DashboardPage: React.FC<DashboardPageProps> = () => {
   const { clients, isLoading, average } = useClient();
-  const years = calculateAvg(clients).slice(0, 6);
-  const names = clients.map((client) => client.name).slice(0, 6);
+  const years = calculateAvg(clients).reverse().slice(0, 5);
+  const names = clients
+    .map((client) => client.name)
+    .reverse()
+    .slice(0, 5);
   return (
     <div className="dashboard">
       <h1>Dashboard de Clientes</h1>
